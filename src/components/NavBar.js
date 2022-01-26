@@ -1,9 +1,10 @@
 import { Container, Nav, Navbar as Barra, NavDropdown } from "react-bootstrap";
+import CartWidget from "./CartWidget";
 const NavBar = () => {
   return( 
             <Barra bg="light" expand="lg">
         <Container>
-            <Barra.Brand href="#home">Minecraft By Jockerel</Barra.Brand>
+            <Barra.Brand class = "text-danger" href="#home">Minecraft By Jockerel</Barra.Brand>
             <Barra.Toggle aria-controls="basic-navbar-nav" />
             <Barra.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -18,6 +19,7 @@ const NavBar = () => {
                 </NavDropdown>
             </Nav>
             </Barra.Collapse>
+        <CartWidget />
         </Container>
         </Barra>
         )

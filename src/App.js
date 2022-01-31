@@ -14,13 +14,12 @@ function App () {
     const date = new Date();
     const hour = date.getHours ();
     const minute = date.getMinutes();
-    const seconds = date.getSeconds ();
-    setDate({hour, minute, seconds})
+    setDate({hour, minute})
     setCount(count +1)
   };
   const discount = () => {setCount(count -1)}
   const printDate= () => {
-    return <p> Time: {date.day}:{date.minute}:{date.seconds} </p>
+    return <p> Time: {date.day}:{date.hour}:{date.minute} </p>
   }
   return (
     <div> 

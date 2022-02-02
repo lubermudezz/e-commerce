@@ -4,7 +4,16 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import {useState} from 'react';
+import {task} from './components/ItemListContainer'
 
+task 
+  .then ((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log (error);
+  })
+  .finally (console.log ("Done"));
 
 function App () {
 

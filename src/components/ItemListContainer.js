@@ -9,6 +9,11 @@ const items = [
 
 ];
 
+export const task = new Promise ((resolve, reject) => {
+  setTimeout (() => {
+      resolve (items)
+  }, 2000)
+})
 
 const ItemListContainer = () => {
     const [selectedItem, setSelectedItem] = useState(null) ;

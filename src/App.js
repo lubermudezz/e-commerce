@@ -3,20 +3,29 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import {useState} from 'react';
-import {task} from './components/ItemListContainer'
+import {useEffect, useState} from 'react';
+import {task} from './components/helper'
 
-task 
-  .then ((result) => {
-    console.log(result);
-  })
-  .catch((error) => {
-    console.log (error);
-  })
-  .finally (console.log ("Done"));
+
 
 function App () {
+  task.then((result) => {
+    console.log({result});
+  }); 
+    useEffect (() => {
+      getTaskResult();
+    }, []);
 
+
+  const getTaskResult = async () => {
+    try {
+        const result = await task;
+        console.log(result);
+    } catch (error){
+        console.log (error);
+    }
+
+}
   const [count, setCount] = useState (0);
   const [date, setDate] = useState (null);
   const addCount = () => {

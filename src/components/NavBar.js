@@ -17,9 +17,11 @@ const NavBar = () => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">Personalizados</NavDropdown.Item>
                 </NavDropdown>
+                
+                <CartWidget />
             </Nav>
             </Barra.Collapse>
-        <CartWidget />
+        
         </Container>
         </Barra>
         )

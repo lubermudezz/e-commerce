@@ -57,3 +57,8 @@
 .button-count button {
   margin: 10px; color: orange; background-color: black;
 }
+
+img {
+  width: 500px;
+  height: auto;
+}

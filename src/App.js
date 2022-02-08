@@ -2,13 +2,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+// import ItemListContainer from './components/ItemListContainer';
 import {useEffect, useState} from 'react';
 import {task} from './components/helper'
+import ItemDetailContainer from './components/itemDetailContainer';
 
 
 
 function App () {
+  
+
   task.then((result) => {
     console.log({result});
   }); 
@@ -24,6 +27,7 @@ function App () {
     } catch (error){
         console.log (error);
     }
+  
 
 }
   const [count, setCount] = useState (0);
@@ -46,7 +50,8 @@ function App () {
       <NavBar />
       <h1>Bienvenidos a la tienda de Minecraft By Jockerel</h1>
       <hr/>
-      <ItemListContainer/>
+      {/* <ItemListContainer/> */}
+      <ItemDetailContainer/>
     
 </div>
 
